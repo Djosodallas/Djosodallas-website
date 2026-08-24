@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>DJ Oso Dallas | DJ & Event Entertainment</title>
+
+  <meta name="description" content="DJ Oso Dallas provides professional DJ and event entertainment for weddings, quinceañeras, private parties and special events throughout Dallas-Fort Worth.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #050505;
+      color: white;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0,0,0,.92);
+      border-bottom: 1px solid #d4af37;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 900;
+      color: #d4af37;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 20px 60px;
+      background:
+        radial-gradient(circle at center, rgba(212,175,55,.15), transparent 50%),
+        linear-gradient(135deg, #111, #000);
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-small {
+      color: #d4af37;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 9vw, 100px);
+      line-height: .95;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      font-size: 21px;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto 35px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      transition: .3s;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: black;
+    }
+
+    .btn-gold:hover {
+      background: white;
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 2px solid white;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      border-color: #d4af37;
+      color: #d4af37;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 100px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 55px;
+    }
+
+    .section-title p {
+      color: #d4af37;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .section-title h2 {
+      font-size: 42px;
+      text-transform: uppercase;
+    }
+
+    /* SERVICES */
+
+    .services {
+      background: #0c0c0c;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: #151515;
+      padding: 40px 28px;
+      border: 1px solid #222;
+      border-radius: 10px;
+      transition: .3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      border-color: #d4af37;
+    }
+
+    .card h3 {
+      color: #d4af37;
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #bbb;
+    }
+
+    /* ABOUT */
+
+    .about {
+      text-align: center;
+      max-width: 950px;
+      margin: auto;
+    }
+
+    .about p {
+      color: #bbb;
+      font-size: 19px;
+      margin-bottom: 20px;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: #d4af37;
+      color: black;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .cta .btn {
+      background: black;
+      color: white;
+    }
+
+    .cta .btn:hover {
+      background: white;
+      color: black;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      color: #bbb;
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 25px;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      background: black;
+      border-top: 1px solid #222;
+      color: #777;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      nav {
+        padding: 15px 5%;
+      }
+
+      nav ul {
+        display: none;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 75px 6%;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .section-title h2 {
+        font-size: 33px;
+      }
+
+      .cta h2 {
+        font-size: 34px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+
+  <div class="logo">
+    DJ OSO DALLAS
+  </div>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#booking">Booking</a></li>
+  </ul>
+
+</nav>
+
+
+<!-- HOME -->
+
+<header class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="hero-small">
+      Dallas • Fort Worth
+    </div>
+
+    <h1>
+      DJ OSO<br>
+      <span>DALLAS</span>
+    </h1>
+
+    <p>
+      Professional DJ and event entertainment for weddings,
+      quinceañeras, private parties and unforgettable celebrations.
+    </p>
+
+    <div class="buttons">
+
+      <a href="#booking" class="btn btn-gold">
+        Book Your Event
+      </a>
+
+      <a href="#services" class="btn btn-outline">
+        View Services
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+  <div class="section-title">
+    <p>What We Do</p>
+    <h2>Event Services</h2>
+  </div>
+
+  <div class="service-grid">
+
+    <div class="card">
+      <h3>Weddings</h3>
+      <p>
+        Professional DJ entertainment for ceremonies,
+        cocktail hour, dinner, dancing and grand exits.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Quinceañeras</h3>
+      <p>
+        Complete entertainment for your quinceañera,
+        from formal introductions to the dance floor.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Private Events</h3>
+      <p>
+        Birthdays, anniversaries, corporate events,
+        family celebrations and special occasions.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Professional Audio</h3>
+      <p>
+        Powerful, clean sound designed for your venue
+        and guest count.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Lighting</h3>
+      <p>
+        Event lighting designed to transform your
+        dance floor and venue atmosphere.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Video & Visuals</h3>
+      <p>
+        Custom event visuals and video content
+        for an unforgettable presentation.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="section-title">
+    <p>Our Mission</p>
+    <h2>More Than Just Music</h2>
+  </div>
+
+  <div class="about">
+
+    <p>
+      DJ Oso Dallas provides professional entertainment
+      designed around your event, your guests and your vision.
+    </p>
+
+    <p>
+      From the first introduction to the final song of the night,
+      our goal is to create an experience your guests will remember.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- CALL TO ACTION -->
+
+<section class="cta">
+
+  <h2>Your Event. Your Music. Your Night.</h2>
+
+  <p>
+    Let's create an unforgettable celebration.
+  </p>
+
+  <a href="#booking" class="btn">
+    Check Availability
+  </a>
+
+</section>
+
+
+<!-- BOOKING -->
+
+<section class="contact" id="booking">
+
+  <div class="section-title">
+    <p>Let's Talk</p>
+    <h2>Book DJ Oso Dallas</h2>
+  </div>
+
+  <p>
+    Planning a wedding, quinceañera, birthday or special event?
+    Contact DJ Oso Dallas to check availability and discuss your event.
+  </p>
+
+  <a href="#" class="btn btn-gold">
+    Contact Us
+  </a>
+
+</section>
+
+
+<footer>
+
+  <p>
+    © 2026 <strong>DJ Oso Dallas</strong>. All Rights Reserved.
+  </p>
+
+  <p>
+    Dallas–Fort Worth, Texas
+  </p>
+
+</footer>
+
+</body>
+</html>
